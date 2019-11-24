@@ -852,6 +852,8 @@ function main() {
     title="contains[Key, Val](b: SortedTable[Key, Val]; x: Key): bool"><wbr />contains<span class="attachedType">SortedTable</span></a></li>
   <li><a class="reference" href="#%5B%5D%3D%2CSortedTable%5BKey%2CVal%5D%2CKey%2CVal"
     title="`[]=`[Key, Val](b: var SortedTable[Key, Val]; key: Key; val: Val)"><wbr />`[]=`<span class="attachedType">SortedTable</span></a></li>
+  <li><a class="reference" href="#add%2CSortedTable%5BKey%2CVal%5D%2CKey%2CVal"
+    title="add[Key, Val](b: var SortedTable[Key, Val]; key: Key; val: Val)"><wbr />add<span class="attachedType">SortedTable</span></a></li>
   <li><a class="reference" href="#hasKeyOrPut%2CSortedTable%5BKey%2CVal%5D%2CKey%2CVal"
     title="hasKeyOrPut[Key, Val](b: var SortedTable[Key, Val]; key: Key; val: Val): bool"><wbr />has<wbr />Key<wbr />Or<wbr />Put<span class="attachedType">SortedTable</span></a></li>
   <li><a class="reference" href="#del%2CSortedTable%5BKey%2CVal%5D%2CKey"
@@ -888,7 +890,7 @@ function main() {
   
   <p class="module-desc"><p>SortedTable implementation using <a class="reference external" href="https://en.wikipedia.org/wiki/Btree">B-Tree</a> as an internal data structure.</p>
 <p>The  BTree algorithm is based on:</p>
-<ul class="simple"><li>N. Wirth, J. Gutknecht: Project Oberon, The Design of an Operating System and Compiler; pages 174 - 190.</li>
+<ul class="simple"><li>N. Wirth, J. Gutknecht: Project Oberon, The Design of an Operating System and Compiler; pages 174-190.</li>
 </ul>
 <p>Public API tries to mimic API of Nim's built-in Tables as much as possible. The ommission of <tt class="docutils literal"><span class="pre">add</span></tt> procedure is done on purpose.</p>
 </p>
@@ -973,6 +975,13 @@ Alias of <a class="reference external" href="#hasKey,SortedTable[Key,Val],Key">h
 Inserts a <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair into <tt class="docutils literal"><span class="pre">b</span></tt>.
 
 </dd>
+<a id="add,SortedTable[Key,Val],Key,Val"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#add%2CSortedTable%5BKey%2CVal%5D%2CKey%2CVal"><span class="Identifier">add</span></a><span class="Other">[</span><span class="Identifier">Key</span><span class="Other">,</span> <span class="Identifier">Val</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="sorta.html#SortedTable"><span class="Identifier">SortedTable</span></a><span class="Other">[</span><span class="Identifier">Key</span><span class="Other">,</span> <span class="Identifier">Val</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">Key</span><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">Val</span><span class="Other">)</span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="hasKeyOrPut,SortedTable[Key,Val],Key,Val"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#hasKeyOrPut%2CSortedTable%5BKey%2CVal%5D%2CKey%2CVal"><span class="Identifier">hasKeyOrPut</span></a><span class="Other">[</span><span class="Identifier">Key</span><span class="Other">,</span> <span class="Identifier">Val</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="sorta.html#SortedTable"><span class="Identifier">SortedTable</span></a><span class="Other">[</span><span class="Identifier">Key</span><span class="Other">,</span> <span class="Identifier">Val</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">Key</span><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">Val</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
 <dd>
@@ -1053,7 +1062,7 @@ Iterates over all the values in the table <tt class="docutils literal"><span cla
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2019-11-04 06:35:59 UTC</small>
+        <small>Made with Nim. Generated: 2019-11-24 22:44:31 UTC</small>
       </div>
     </div>
   </div>

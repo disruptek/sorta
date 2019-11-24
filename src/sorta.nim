@@ -225,6 +225,10 @@ proc `[]=`*[Key, Val](b: var SortedTable[Key, Val]; key: Key; val: Val) =
   insertHelper(b, key, val)
 
 
+proc add*[Key, Val](b: var SortedTable[Key, Val]; key: Key; val: Val) =
+  `[]=`(b, key, val)
+
+
 proc hasKeyOrPut*[Key, Val](b: var SortedTable[Key, Val]; key: Key; val: Val): bool =
   ## Returns true if `key` is in the table, otherwise inserts `value`.
   if b.root.isNil: b = initSortedTable[Key, Val]()
